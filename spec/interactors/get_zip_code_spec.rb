@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe GetZipCode do
-  subject(:result) { described_class.run(address: address, city: city, state_code: state_code) }
+  subject(:result) { described_class.run(address:, city:, state_code:) }
 
   let(:address) { Faker::Address.street_address }
   let(:city) { Faker::Address.city }

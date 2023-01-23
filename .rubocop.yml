@@ -4,5 +4,13 @@ AllCops:
     - 'bin/*'
     - 'vendor/**/*'
 
+Lint/MissingSuper:
+  Exclude:
+    - 'app/interactors/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 Style/Documentation:
   Enabled: false

@@ -2,28 +2,20 @@
 
 require 'net/http'
 
-class GetZipCode
-  def self.run(address:, city:, state_code:)
-    new(address, city, state_code).run
-  end
-
-  def run
-    OpenStruct.new(
-      success?: error.blank?,
-      error: error,
-      value: value
-    )
-  end
-
+class GetZipCode < BaseInteractor
   protected
 
-  def initialize(address, city, state_code)
+  def initialize(address:, city:, state_code:)
     @address = address
     @city = city
     @state_code = state_code
   end
 
   private
+
+  def success
+    error.blank?
+  end
 
   def value
     @value ||= Nokogiri::XML(api_response).xpath('//Zip5').inner_text.presence
