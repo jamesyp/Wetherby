@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.0"
+ruby '3.2.0'
 
-gem "rails", "~> 7.0.4", ">= 7.0.4.1"
-gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
-gem "puma", "~> 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
-gem "jbuilder"
-gem "bootsnap", require: false
+gem 'bootsnap', require: false
+gem 'importmap-rails'
+gem 'jbuilder'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.0.4', '>= 7.0.4.1'
+gem 'sprockets-rails'
+gem 'sqlite3', '~> 1.4'
+gem 'stimulus-rails'
+gem 'turbo-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -28,19 +28,20 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 group :development, :test do
-  gem "pry-rails"
-  gem "pry-byebug"
-  gem "rspec-rails"
-  gem "faker"
+  gem 'faker'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
-  gem "web-console"
+  gem 'rubocop', require: false
+  gem 'web-console'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
