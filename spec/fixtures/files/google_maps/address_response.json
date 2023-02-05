@@ -1,0 +1,138 @@
+{
+    "result": {
+        "verdict": {
+            "inputGranularity": "PREMISE",
+            "validationGranularity": "PREMISE",
+            "geocodeGranularity": "PREMISE",
+            "addressComplete": true,
+            "hasInferredComponents": true
+        },
+        "address": {
+            "formattedAddress": "744 Irving Street, San Francisco, CA 94122-2410, USA",
+            "postalAddress": {
+                "regionCode": "US",
+                "languageCode": "en",
+                "postalCode": "94122-2410",
+                "administrativeArea": "CA",
+                "locality": "San Francisco",
+                "addressLines": [
+                    "744 Irving St"
+                ]
+            },
+            "addressComponents": [
+                {
+                    "componentName": {
+                        "text": "744",
+                        "languageCode": "en"
+                    },
+                    "componentType": "street_number",
+                    "confirmationLevel": "CONFIRMED"
+                },
+                {
+                    "componentName": {
+                        "text": "Irving Street",
+                        "languageCode": "en"
+                    },
+                    "componentType": "route",
+                    "confirmationLevel": "CONFIRMED"
+                },
+                {
+                    "componentName": {
+                        "text": "San Francisco",
+                        "languageCode": "en"
+                    },
+                    "componentType": "locality",
+                    "confirmationLevel": "CONFIRMED"
+                },
+                {
+                    "componentName": {
+                        "text": "CA",
+                        "languageCode": "en"
+                    },
+                    "componentType": "administrative_area_level_1",
+                    "confirmationLevel": "CONFIRMED"
+                },
+                {
+                    "componentName": {
+                        "text": "94122"
+                    },
+                    "componentType": "postal_code",
+                    "confirmationLevel": "CONFIRMED",
+                    "inferred": true
+                },
+                {
+                    "componentName": {
+                        "text": "USA",
+                        "languageCode": "en"
+                    },
+                    "componentType": "country",
+                    "confirmationLevel": "CONFIRMED",
+                    "inferred": true
+                },
+                {
+                    "componentName": {
+                        "text": "2410"
+                    },
+                    "componentType": "postal_code_suffix",
+                    "confirmationLevel": "CONFIRMED",
+                    "inferred": true
+                }
+            ]
+        },
+        "geocode": {
+            "location": {
+                "latitude": 37.7642911,
+                "longitude": -122.4660297
+            },
+            "plusCode": {
+                "globalCode": "849VQG7M+PH"
+            },
+            "bounds": {
+                "low": {
+                    "latitude": 37.7641697,
+                    "longitude": -122.4660883
+                },
+                "high": {
+                    "latitude": 37.7644491,
+                    "longitude": -122.4659819
+                }
+            },
+            "featureSizeMeters": 18.308416,
+            "placeId": "ChIJT3cpTlyHhYARaRoFHzq8P-o",
+            "placeTypes": [
+                "premise"
+            ]
+        },
+        "metadata": {
+            "business": true,
+            "poBox": false
+        },
+        "uspsData": {
+            "standardizedAddress": {
+                "firstAddressLine": "744 IRVING ST",
+                "cityStateZipAddressLine": "SAN FRANCISCO CA 94122-2410",
+                "city": "SAN FRANCISCO",
+                "state": "CA",
+                "zipCode": "94122",
+                "zipCodeExtension": "2410"
+            },
+            "deliveryPointCode": "44",
+            "deliveryPointCheckDigit": "7",
+            "dpvConfirmation": "Y",
+            "dpvFootnote": "AABB",
+            "dpvCmra": "N",
+            "dpvVacant": "N",
+            "dpvNoStat": "N",
+            "carrierRoute": "C033",
+            "carrierRouteIndicator": "D",
+            "postOfficeCity": "SAN FRANCISCO",
+            "postOfficeState": "CA",
+            "fipsCountyCode": "075",
+            "county": "SAN FRANCISCO",
+            "elotNumber": "0062",
+            "elotFlag": "D",
+            "addressRecordType": "S"
+        }
+    },
+    "responseId": "99364341-9361-4136-a34d-8e5404871e55"
+}
