@@ -1,0 +1,13 @@
+<section>
+  <h2>Forecast some weather</h2>
+  <%= render 'form' %>
+</section>
+
+<hr />
+<% if @address && @forecast %>
+  <%= render 'forecast' %>
+<% end %>
+
+<% if @error %>
+  <p><%= @error %>
+<% end %>

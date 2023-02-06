@@ -1,0 +1,12 @@
+<%= form_with url: '/', method: :get do |form| %>
+  <%= form.label :street, 'Street Address' %>
+  <%= form.text_field :street %>
+
+  <%= form.label :city, 'City' %>
+  <%= form.text_field :city %>
+
+  <%= form.label :state, 'State (2 letter code)' %>
+  <%= form.text_field :state, size: 2, maxlength: 2, style: 'text-transform: uppercase;' %>
+
+  <%= form.submit "Go", name: '' %>
+<% end %>

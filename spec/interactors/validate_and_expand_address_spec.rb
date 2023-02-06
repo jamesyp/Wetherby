@@ -26,7 +26,7 @@ describe ValidateAndExpandAddress do
   it 'returns a processed result' do
     aggregate_failures do
       expect(result.success?).to eq(true)
-      expect(result.result).to eq(
+      expect(result.value).to eq(
         {
           standardized_address:,
           geo_point:
@@ -44,7 +44,7 @@ describe ValidateAndExpandAddress do
     it 'returns an error result with description' do
       expect(result.success?).to eq(false)
       expect(result.error).to eq(expected_error)
-      expect(result.result).to be_nil
+      expect(result.value).to be_nil
     end
   end
 end

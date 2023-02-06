@@ -1,0 +1,28 @@
+<section>
+  <h2>Forecast for <%= formatted_address(@address) %></h2>
+
+  <% @forecast.each do |forecast| %>
+    <div>
+      <h3>
+        <%= forecast[:name] %>
+        <%= image_tag(forecast[:icon], size: '32x32') %>
+      </h3>
+      <h4>
+        <%= formatted_time(forecast[:start_time]) %>
+        -
+        <%= formatted_time(forecast[:end_time]) %>
+      </h4>
+      <p>
+        🌡
+        <%= "#{forecast[:temperature]}#{forecast[:temperature_unit]}" %>
+        <%= temperature_indicator(forecast[:temperature_trend]) %>
+      </p>
+
+      <p>💨 <%= "#{forecast[:wind_speed]} #{forecast[:wind_direction]}" %></p>
+
+      <p><%= forecast[:detailed_forecast] %></p>
+    </div>
+
+    <hr />
+  <% end %>
+</section>
