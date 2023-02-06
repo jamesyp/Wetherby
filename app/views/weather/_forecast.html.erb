@@ -1,5 +1,8 @@
 <section>
-  <h2>Forecast for <%= formatted_address(@address) %></h2>
+  <h2>
+    <%= content_tag(:span, '💾') unless @not_cached %>
+    Forecast for <%= formatted_address(@address) %>
+  </h2>
 
   <% @forecast.each do |forecast| %>
     <div>
