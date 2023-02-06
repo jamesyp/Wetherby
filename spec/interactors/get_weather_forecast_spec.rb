@@ -42,7 +42,9 @@ describe GetWeatherForecast do
   end
 
   it 'returns an array of forecast periods' do
-    expect(subject.result).to eq(expected_forecast)
+    expect(result.success?).to eq(true)
+    expect(result.value).to eq(expected_forecast)
+    expect(result.error).to be_nil
   end
 
   context 'API returns an error' do
@@ -51,9 +53,9 @@ describe GetWeatherForecast do
     let(:error) { JSON.parse(point_response.body)['detail'] }
 
     it do
-      expect(subject.success?).to eq(false)
-      expect(subject.result).to be_nil
-      expect(subject.error).to eq(error)
+      expect(result.success?).to eq(false)
+      expect(result.value).to be_nil
+      expect(result.error).to eq(error)
     end
   end
 end

@@ -11,7 +11,7 @@ class ValidateAndExpandAddress < BaseInteractor
 
   private
 
-  def result
+  def value
     {
       standardized_address: validated_address.dig(:usps_data, :standardized_address),
       geo_point: validated_address.dig(:geocode, :location)

@@ -14,7 +14,7 @@ class GetWeatherForecast < BaseInteractor
 
   private
 
-  def result
+  def value
     forecast_data.dig(:properties, :periods)
   end
 
