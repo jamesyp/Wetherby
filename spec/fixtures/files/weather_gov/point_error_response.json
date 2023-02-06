@@ -1,0 +1,8 @@
+{
+    "correlationId": "4b879606",
+    "title": "Invalid Parameter",
+    "type": "https://api.weather.gov/problems/InvalidParameter",
+    "status": 400,
+    "detail": "Parameter \"point\" is invalid: '1000,1000' does not appear to be a valid coordinate",
+    "instance": "https://api.weather.gov/requests/4b879606"
+}
