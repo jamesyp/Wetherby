@@ -42,17 +42,18 @@ describe GetWeatherForecast do
   end
 
   it 'returns an array of forecast periods' do
-    expect(subject.value).to eq(expected_forecast)
+    expect(subject.result).to eq(expected_forecast)
   end
 
   context 'API returns an error' do
     let(:point_response_fixture) { 'weather_gov/point_error_response.json' }
     let(:point_response_ok) { false }
+    let(:error) { JSON.parse(point_response.body)['detail'] }
 
     it do
       expect(subject.success?).to eq(false)
-      expect(subject.value).to be_nil
-      expect(subject.error).to eq("Parameter \"point\" is invalid: '1000,1000' does not appear to be a valid coordinate")
+      expect(subject.result).to be_nil
+      expect(subject.error).to eq(error)
     end
   end
 end

@@ -14,11 +14,8 @@ class GetWeatherForecast < BaseInteractor
 
   private
 
-  def value
+  def result
     forecast_data.dig(:properties, :periods)
-  rescue StandardError => e
-    @error = e.message
-    nil
   end
 
   def forecast_endpoint
